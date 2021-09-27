@@ -1,0 +1,35 @@
+ALGORITHM Dotproduct
+
+//procedur dot_produc
+PROCEDURE dot_produc(v1 , v2 : ARRAY_OF FLOAT[n])
+VAR
+    i : INTEGER
+    ps : FLOAT
+BEGIN
+    FOR i FROM 0 TO v1.length - 1 STEP 1  DO
+        read (v1[i])
+        FOR i FROM 0 TO v2.length - 1  STEP 1 DO
+            read (v2[i])
+        END_FOR
+    END_FOR
+    ps <-- 0
+    FOR i FROM 0 TO v1.lenght - 1 STEP 1  DO
+        ps <-- ps + v1(i) * v2(i)
+    END_FOR
+    whrite (" the dot scalar product of v1 and v2 is :" , ps)
+END
+
+// l'algorithme
+VAR
+    v1 , v2 : ARRAY_OF FLOAT[n];
+    ps : FLOAT
+    i : INTEGER 
+BEGIN
+   i <-- 0
+   whrite ( " donner l'elemnt ", i + 1 , "de la vecteur v1" )
+   read (v1(i))
+   whrite ( " donner l'elemnt ", i + 1 , "de la vecteur v2" )
+   read (v2(i))
+   // appele du procedur
+   dot_produc(ps)
+END
